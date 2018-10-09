@@ -1,0 +1,44 @@
+{
+		"sunday": [
+				"\u0026nbsp;",
+				"\u0026nbsp;",
+				"\u0026nbsp;",
+				"\u0026nbsp;"
+		],
+		"monday": [
+				"\u0026nbsp;",
+				"\u0026nbsp;",
+				"\u0026nbsp;",
+				"高等数学\u003cbr /\u003e计算机1701-1705"
+		],
+		"tuesday": [
+				"\u0026nbsp;",
+				"\u0026nbsp;",
+				"\u0026nbsp;",
+				"\u0026nbsp;"
+		],
+		"wednesday": [
+				"\u0026nbsp;",
+				"\u0026nbsp;",
+				"\u0026nbsp;",
+				"\u0026nbsp;"
+		],
+		"thursday": [
+				"\u0026nbsp;",
+				"\u0026nbsp;",
+				"\u0026nbsp;",
+				"\u0026nbsp;"
+		],
+		"friday": [
+				"\u0026nbsp;",
+				"高等数学\u003cbr /\u003e计算机1701-1705",
+				"\u0026nbsp;",
+				"\u0026nbsp;"
+		],
+		"saturday": [
+				"\u0026nbsp;",
+				"\u0026nbsp;",
+				"\u0026nbsp;",
+				"\u0026nbsp;"
+		]
+}

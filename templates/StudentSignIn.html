@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-type" content="text/html">
+		<meta name="author" content="fracturesr">
+		<title>SIGN IN</title>
+		<style>body{background-color:white;}</style>
+		<link rel="stylesheet" type="text/css" href="/static/css/StudentSignIn.css" />
+		<script src="/static/js/jquery-3.3.1.min.js"></script>
+		<script src="/static/js/clock.js"></script>
+		<script type="text/javascript" src="https://3gimg.qq.com/lightmap/components/geolocation/geolocation.min.js"></script>
+		<script src="/static/js/getInfo.js"></script>
+	</head>
+	<body onload="startTime(), getStuInfo(), getPosAlter()"><!--启动时钟，信息收集和定位-->
+		<div id="mainLayout">
+			<br />
+			<br />
+			<div id="timedisplay"></div>
+			<br />
+			<div id="stuInfo"></div>
+			<br />
+			<br />
+			<table id="lectureInfo" style="text-align:center;margin-left:80px;width:900px;" border="1" cellspacing="0"></table>
+			<br />
+			<!--拉去可选课程-->
+			<button type="button" onclick="getLectureInfo()" id="getLecture" style="margin-left:450px;">GET LECTURE INFO</button>
+		</div>
+	</body>
+</html>

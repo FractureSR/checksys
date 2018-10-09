@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-type" content="text/html">
+		<meta name="author" content="fracturesr">
+		<style>body{background-color:lightblue;}</style>
+		<title>PUSH</title>
+		<link href="/static/css/TeacherPush.css" type="text/css" rel="stylesheet" />
+		<script src="/static/js/jquery-3.3.1.min.js"></script>
+		<script src="/static/js/clock.js"></script>
+		<script src="/static/js/jsonProcesser.js"></script>
+		<script src="/static/js/viewLecture.js"></script>
+		<script type="text/javascript" src="https://3gimg.qq.com/lightmap/components/geolocation/geolocation.min.js"></script>
+		<script src="/static/js/pushInfo.js"></script>
+	</head>
+	<!--启动clock.js的时钟，并启动定位（viewLecture.js）-->
+	<body onload="startTime(),getPos()">
+		<div id="mainLayout">
+			<br />
+			<br />
+			<div id="timedisplay" style="margin-left:80px;"></div>
+			<br />
+			<div style="margin-left:80px;">Welcome , {{.}}</div>
+			<br />
+			<br />
+			<div style="margin-left:80px;">
+			<table border="1" width="880" height="300" id="table" cellspacing="0" style="text-align:center;">
+				<tr>
+				<th></th>
+				<th>Sunday</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+				<th>Saturday</th>
+				</tr>
+				<tr>
+				<th>1</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				</tr>
+				<tr>
+				<th>2</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				</tr>
+				<tr>
+				<td colspan="8" align="center">lunch time</td>
+				</tr>
+				<tr>
+				<th>3</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				</tr>
+				<tr>
+				<th>4</th>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				</tr>
+			</table>
+			<br />
+			<!--获取时间表-->
+			<button type="button" onclick="jsonProcesser()" style="margin-left:350px;height:60px;width:120px">GET TIMETABLE</button>
+			<br />
+			<br />
+			<table border="1" width="880" height="50" id="available" cellspacing="0" style="text-align:center"></table>
+			<br />
+			<!--查看可以被发布的课程-->
+			<button type="button" onclick="viewLecture()" style="margin-left:350px;height:60px;width:120px">LECTURE AVAILABLE</button>
+			<br />
+			<br />
+			</div>
+			<div id="test"></div>
+		</div>
+	</body>
+</html>

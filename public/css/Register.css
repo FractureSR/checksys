@@ -1,0 +1,57 @@
+#Layout
+{
+	position:absolute;
+	background-color:white;
+	top:0%;
+	left:8%;
+	width:84%;
+	height:100%;
+}
+
+#map
+{
+	float:left;
+	margin-left:5%;
+	width:60%;
+	margin-top:2%;
+	background-color:#f5f8c1;
+	border-radius: 25px;
+    border: 2px solid #056ee5;
+    padding: 20px; 
+    height: 80%; 
+}
+
+#info
+{
+	float:right;
+	margin-right:5%;
+	margin-top:2%;
+	width:20%;
+	background-color:#f5f8c1;
+	border-radius: 25px;
+    border: 2px solid #8AC007;
+    padding: 20px; 
+    height: 45%; 
+}
+
+#button
+{
+	float:right;
+	margin-right:10%;
+	margin-top:5%;
+	width:12%;
+	height:10%;
+	background-color:#42ed02;
+	border-radius: 25px;
+	border: 2px solid #027bed;
+	box-shadow: 5px 5px 5px #888888;
+	transition: all 1s;
+    -webkit-transition: all 1s; /* Safari */
+}
+
+#button:hover
+{
+	box-shadow: 10px 10px 5px #888888;
+}
+
+

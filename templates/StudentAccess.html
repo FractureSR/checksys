@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="refresh" content="90">
+		<meta http-equiv="Content-type" content="text/html">
+		<meta name="author" content="fracturesr">
+		<title>STUDENT LOGIN</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/StudentLogin.css" />
+		<script type="text/javascript">
+			var number = Math.random();
+			number = Math.ceil(number * 100%5); 
+			number.toString();
+			var picture = number + ".jpg";
+			document.write("<style>body {background-image:url(/static/image/" + picture + ");-moz-background-size:100% 100%;background-size:100% 100%;}</style>");
+		</script>
+	</head>
+	<body>
+		<h1 style="text-align:center;" id="mainheading">
+			STUDENT LOGIN ACCESS
+		</h1>
+		<br />
+		<div style="margin-left:450px;margin-right:450px;height:340px;margin-top:30px">
+			<div style="background-color:#FFF8D7;margin:10px;height:320px;">
+				<form action="/studentlogin" method="post" enctype="application/x-www-form-urlencoded">
+					<fieldset style="text-align:center;height:295px;">
+						<legend>STUDENT LOGIN</legend>
+						    <br />
+							<br />
+							STUDENT ID : <input type="text" name="id">
+							<br />
+							<br />
+							PASSWORD   : <input type="password" name="password">
+							<br />
+							<br />
+										<input type="submit" value="L O G I N" id="button">
+							<br />      {{.}}
+				</form>
+			</div>
+		</div>
+		<br />
+		<br />
+		<br />
+		<div>
+			<address style="text-align:center;">
+				<small>© Copyright by fracturesr,CSE,NEU,Shenyang,China</small>
+			</address>
+		</div>
+		<hr/>
+		<div style="background-color:blue;height:40px;"></div>
+	</body>
+</html>

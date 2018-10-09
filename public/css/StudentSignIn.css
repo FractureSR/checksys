@@ -1,0 +1,22 @@
+#mainLayout
+{
+	background-color:#D2E9FF;
+	margin-top:-20px;
+	margin-bottom:-20px;
+	margin-left:80px;
+	margin-right:80px;
+	height:700px;
+}
+
+#timedisplay
+{
+	margin-left:80px;
+}
+
+#getLecture
+{
+	height:50px;
+	width:150px;
+	text-align:center;
+	font-family:STHupo;
+}

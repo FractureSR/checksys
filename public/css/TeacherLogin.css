@@ -1,0 +1,22 @@
+#form
+{
+	position:absolute;
+	background-color:lightyellow;
+	top:90px;
+	left:20px;
+	height:380px;
+}
+
+#button
+{
+	background-color:#B0C4DE;
+	font-family:STLiti;
+}
+
+#schoolmark
+{
+	position:absolute;
+	height:380px;
+	top:120px;
+	left:380px;
+}

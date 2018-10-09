@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-type" content="text/html">
+		<meta name="author" content="fracturesr">
+		<title>TEACHER LOGIN</title>
+		<link href="/static/css/TeacherLogin.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<div style="height:50px;background-color:blue;text-align:center"><strong><h1>TEACHER LOGIN ACCESS</h1></strong></div>
+		<div style="height:430px;background-color:lightblue;margin-top:10px;margin-bottom:10px;">
+			<div id="form">
+				<form action="/teacherlogin" method="post" enctype="application/x-www-form-urlencoded"> <!--以post方法提交教师用户名密码到/teacherlogin-->
+					<fieldset style="text-align:center;height:355px;width:300px;">
+						<legend>LOGIN</legend>
+							<br />
+							<br />
+							teacher ID<br /><input type="text" name="teacherId">
+							<br />
+							<br />
+							PASSWORD<br /><input type="password" name="password">
+							<br />
+							<br />
+										<input type="submit" value="L O G I N" id="button">
+							<br />      {{.}}
+				</form>
+			</div>
+			<div id="schoolmark">
+				<image src="/static/image/schoolmark.jpg" alt="东北大学校徽" />
+			</div>
+		</div>
+		<div style="height:50px;background-color:blue;text-align:center;">
+			<small>© Copyright by fracturesr,CSE,NEU,Shenyang,China</small>
+		</div>
+	</body>
+</html>
