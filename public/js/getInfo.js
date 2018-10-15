@@ -29,12 +29,13 @@ function getLectureInfo() {
 	//get方法访问/lectureInfo
 	$.get("/lectureInfo", function (response) {
 		console.log(response)
-		if(response = null) {
+		if(response == null) {
 			var msg = "<h2><strong>THERE IS NO LECTURE BEGINING.</strong></h2>"
 			document.getElementById("lectureInfo").innerHTML = msg
 		}
 		//构造课程表格，提供CheckIn()按钮
 		else {
+			console.log(response)
 			var msg = "<tr>" + "<th>No.</th>" + "<th>LECTURE</th>" + "<th>TEACHER</th>" + "<th>AUDIENCE</th>" + "<th>CHECK</th>" + "</tr>" 
 			for(var i = 0; i < response.length; i++) {
 				msg = msg + "<tr>" + "<td>" + (i+1).toString() + "</td>" + "<td>" + response[i].Lecture + "</td>" + "<td>" + response[i].Teacher + "</td>" + "<td>" + response[i].Audience + "</td>" + "<td>" + "<button id=\"" + response[i].Id + "\"onclick=\"getId(this.id),CheckIn()\" style=\"height:30px;width:80px;\">CHECK</button>" + "</td>" + "</tr>"
@@ -59,7 +60,7 @@ function CheckIn() {
 		console.log(match)
 		$.post("/studentCheck", {data : match}, function(response, status) {
 			console.log(response)
-			if(responce == "Major Error" || responce == "Class Error") alert("It seems you are not scheduled to attend the lecture.QAQ")
+			if(response == "Major Error" || response == "Class Error") alert("It seems you are not scheduled to attend the lecture.QAQ")
 			else if(response.Distance <=150){
 				alert("You have registered successfully!")
 			}

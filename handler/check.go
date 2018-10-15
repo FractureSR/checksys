@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"encoding/json"
 	"fmt"
-	"html/template"
+	//"html/template"
 	"net/http"
 	"strconv"
 	"strings"
@@ -73,7 +73,7 @@ func Check(w http.ResponseWriter, r *http.Request) {
 	}
 	mutex.Unlock()
 	if exists { //如果已经发布了
-		t, err := template.ParseFiles("templates/")
+		//t, err := template.ParseFiles("templates/")
 	} else { //如果没有发布的话，发布信息将通过通道输送到core处理
 		apratus.PushInfoDeliver <- ApushInfo
 	}
@@ -171,13 +171,9 @@ func StudentCheck(w http.ResponseWriter, r *http.Request) {
 			if AdistInfo.Distance <= 150 {
 				//当满足定位条件时将准确度信息换位准确度等级
 				ArestudentInfo.SAccu = AdistInfo.Accu_level
-				mutex.Lock()
-				{
-					apratus.Recorders[ArestudentInfo.TeacherId].Append(ArestudentInfo)
-				}
-				mutex.Unlock()
+				//将信息传入副核心
+				apratus.RestudentInfoDeliver <- ArestudentInfo
 			}
-			fmt.Println("Save!", apratus.Recorders[ArestudentInfo.TeacherId].GetInfo())
 
 			w.Header().Set("Content-type", "application/json")
 			w.Write(output)

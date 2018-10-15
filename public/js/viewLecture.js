@@ -47,7 +47,7 @@ function viewLecture(){
 		time[0] = "8:30"
 		time[1] = "10:40"
 		time[2] = "14:00"
-		time[3] = "17:12"
+		time[3] = "23:46"
 		
 		var check = true
 		for(day in obj) {

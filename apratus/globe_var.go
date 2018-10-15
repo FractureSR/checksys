@@ -47,15 +47,17 @@ type StudentInfo struct {
 type RestudentInfo struct {
 	Basic     StudentInfo `json:"basic"`
 	TeacherId string      `json:"teacherId"`
-	SLat      string      `json:"sLat"`
-	SLng      string      `json:"sLng"`
-	SAccu     string      `json:"sAccu"`
+	//SeatNum   string      `json:"seatNum"`
+	//RoomType  string      `json:"roomType"`
+	SLat  string `json:"sLat"`
+	SLng  string `json:"sLng"`
+	SAccu string `json:"sAccu"`
 }
 
 //记录器结构，包含一个通信用的通道和一个用于记录学生返回的数据的切片
 type Recorder struct {
 	PrivateChan chan RestudentInfo
-	checkInData []RestudentInfo
+	CheckInData []RestudentInfo
 }
 
 type Coordinate struct {
@@ -73,17 +75,17 @@ type DistInfo struct {
 func NewRecorder() Recorder {
 	return Recorder{
 		PrivateChan: make(chan RestudentInfo),
-		checkInData: nil,
+		CheckInData: nil,
 	}
 }
 
 func (r Recorder) Append(restudentInfo RestudentInfo) {
-	r.checkInData = append(r.checkInData, restudentInfo)
+	r.CheckInData = append(r.CheckInData, restudentInfo)
 }
 
 //方法，返回数据区数据
 func (r Recorder) GetInfo() []RestudentInfo {
-	return r.checkInData
+	return r.CheckInData
 }
 
 var PushInfoDeliver chan PushInfo

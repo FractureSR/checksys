@@ -17,7 +17,7 @@ function pushInfo(){
 	time[0] = "8:30"
 	time[1] = "10:40"
 	time[2] = "14:00"
-	time[3] = "17:12"
+	time[3] = "23:46"
 	
 	tString = date.toString()
 	var t_start = tString.indexOf(date.getFullYear()) + 5
